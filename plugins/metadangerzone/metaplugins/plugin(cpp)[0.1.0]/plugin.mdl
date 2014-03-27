@@ -1,0 +1,84 @@
+type PluginIdStruct{
+    namespace : *char
+       +doc:"Dot qualified namespace of plugin",
+    version : *char
+        +doc:"Semver version",
+    implementation : *char
+        +doc:"Implementation name of plugin."
+};
+
+type PluginId *PluginIdStruct;
+
+var PluginId_create(
+    namespace *char
+        +doc:"Dot qualified namespace of plugin",
+    version *char
+        +doc:"Semver version",
+    implementation *char
+        +doc:"Implementation name of plugin."
+)->PluginId
+    +doc:"Heap allocate a PluginId";
+
+var PluginId_destroy()->PluginId
+    +doc:"Deallocate a pluginId";
+    
+type MdlStruct{
+    code : (this MdlStruct)-> *char
+        +doc:"Get The Mdl Code"
+}
+    +doc:"Structure holding Mdl Code";
+
+type Mdl *MdlStruct;
+
+var Mdl_Create(source *char)-> Mdl
+    +doc:"Heap allocate an Mdl source. Returns null for malformed mdl";
+var Mdl_Destroy(this Mdl)-> void
+    +doc:"Deallocate an Mdl structure";
+type PluginStubStruct{
+    # Fields
+    id : PluginId
+        +doc:"Identity of Plugin.",
+    imports : **PluginStubStruct
+        +doc:"Null Terminated List of Imported Plugins",
+    depends : **PluginStubStruct
+        +doc:"Null Terminated List of Dependant Plugins",
+    language : *char
+        +doc:"Implementing Language of Plugin",
+    directory : *char
+        +doc:"Path of directory.",
+    documentation : *char
+        +doc:"Docstring of plugin",
+    
+    description : Mdl
+        +doc:"Mdl of plugin",
+    #Methods
+    add_depends : (this *PluginStubStruct, depend *PluginStubStruct) -> void,
+    remove_depends : (this *PluginStubStruct, depend *PluginStubStruct) -> void,
+    add_imports : (this *PluginStubStruct, depend *PluginStubStruct) -> void,
+    remove_imports : (this *PluginStubStruct, depend *PluginStubStruct) -> void,
+};
+
+type PluginStub *PluginStubStruct;
+
+var PluginStub_create(
+    name *char
+        +doc:"Dot Qualified namespace of plugin",
+    implementation *char
+        +doc:"Implementation name of plugin",
+    directory *char
+        +doc:"Fully Qualified directory path to Plugin", 
+    language *char
+        +doc:"Implementing Language.",
+    description Mdl
+        +doc:"Mdl Code for plugin."
+) -> PluginStub
+    +doc:"Heap Allocate a new Plugin Stub";
+    
+var PluginStub_destroy(this PluginStub) -> void
+    +doc:"Deallocate a PluginStub.";
+    
+var PluginStub_commit(this PluginStub)-> uint8
+    +doc:"Write Plugin to Disk. Creates all folders and files. Returns Non zero on failure";
+    
+
+    
