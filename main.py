@@ -1,54 +1,56 @@
 #!/usr/bin/python3
-
-#### A hack to bypass installing madz
 import os, sys, imp
-sys.path.append(os.path.abspath("../massive-dangerzone/"))
 
+# Configuration info.
+madz_config = {
+    "user_config_env": "CRAFT_ENGINE_USER_CONFIG",
+    "log_to_stdout": True,
+    "logging_file": "./engine.log",
+    "plugin_directories" : ["./plugins/"],
+    "plugin_configs" : ["system_config.py"],
+    "executable_directories" : ["executables/unit_test"],
+    "executable_configs" : ["executables/unit_test/unit_test_config.py"]
+}
 
-#### Import start_script symbols
-from madz.start_script import *
+attached = False
+def attach_madz():
+    """Add Madz to your system path"""
+    global attached
+    if not attached:
+        os.chdir(os.path.split(os.path.realpath(__file__))[0])
+        sys.path.append(os.path.abspath("../massive-dangerzone/"))
+    attached = True
 
+def start_daemon():
+    """Start a Madz Server"""
+    attach_madz()
 
-#### Get the game directory:
-game_directory = os.path.join(os.getcwd(), "plugins")
+    import madz.live_script as madz
 
+    daemon = madz.Daemon(**madz_config)
+    print("Configuring Server...")
+    daemon.configure()
+    print("Starting Server")
+    daemon.start()
 
-#### Config
+def create_client():
+    attach_madz()
+    import madz.live_script as madz
+    return madz.Client(madz_config)
 
-# Setup logging first so we can catch config errors.
-logging.bind_to_standard_out()
-logging.bind_to_file(os.path.join(os.path.dirname(__file__), "./engine.log"))
+if __name__ == '__main__':
+    if len(sys.argv) == 1:
+        print("Usage: main.py {daemon} | command {command_name} [-p {plugin_namespace}] [-l{log_level}]}")
+        exit(1)
 
-# Load the user config.
-config.bind_user_config("CRAFT_ENGINE_USER_CONFIG")
+    attach_madz()
 
-# Switch logging over to the config information it now has avalible from the
-# user config.
-logging.use_config()
+    if sys.argv[1] == "daemon":
+        start_daemon()
 
-# Load the system config.
-engine_config_path = os.path.join(os.getcwd(), "..", "craft-engine", "system_config.py")
-with open(engine_config_path) as module_file:
-	engine_config = imp.load_module("engine_config", module_file, engine_config_path, ('.py', 'r', imp.PY_SOURCE))
-our_system_config = engine_config.config
+    else:
+        client = create_client()
+        client.set_executable(sys.argv[1])
+        sys.argv.remove(sys.argv[1])
 
-# Load the game's system config
-game_config_path = os.path.join(os.getcwd(), "game_config.py")
-with open(game_config_path) as module_file:
-	game_config = imp.load_module("game_config", module_file, game_config_path, ('.py', 'r', imp.PY_SOURCE))
-our_system_config = our_system_config.merge(game_config.config)
-
-#### Now we intialize the plugin system.
-
-# Make the system
-system = core.make_system(our_system_config)
-
-# Engine plugin directory. 
-#system.add_directory(core.make_directory(os.path.join(os.getcwd(), "..", "craft-engine", "engine_plugins")))
-# Game plugin directory.
-system.add_directory(core.make_directory(game_directory))
-
-system.index()
-
-#  Run entire system
-helper.execute_system(system, sys.argv)
+        client.run_raw(sys.argv)

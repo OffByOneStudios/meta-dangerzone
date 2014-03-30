@@ -1,5 +1,7 @@
 type PluginIdStruct{
-    namespace : *char
+    internal : *void, 
+
+    plugin_namespace : *char
        +doc:"Dot qualified namespace of plugin",
     version : *char
         +doc:"Semver version",
@@ -23,6 +25,8 @@ var PluginId_destroy()->PluginId
     +doc:"Deallocate a pluginId";
     
 type MdlStruct{
+    internal : *void,
+
     code : (this MdlStruct)-> *char
         +doc:"Get The Mdl Code"
 }
@@ -32,9 +36,12 @@ type Mdl *MdlStruct;
 
 var Mdl_Create(source *char)-> Mdl
     +doc:"Heap allocate an Mdl source. Returns null for malformed mdl";
+
 var Mdl_Destroy(this Mdl)-> void
     +doc:"Deallocate an Mdl structure";
+
 type PluginStubStruct{
+    internal : *void,
     # Fields
     id : PluginId
         +doc:"Identity of Plugin.",

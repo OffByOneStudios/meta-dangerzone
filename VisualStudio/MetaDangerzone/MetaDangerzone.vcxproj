@@ -53,6 +53,7 @@
     <None Include="..\..\main.py" />
     <None Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\plugin.mdl" />
     <None Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\__plugin__.py" />
+    <None Include="..\..\start_daemon.py" />
     <None Include="..\..\system_config.py" />
     <None Include="..\build.bat" />
     <None Include="..\clean.bat" />

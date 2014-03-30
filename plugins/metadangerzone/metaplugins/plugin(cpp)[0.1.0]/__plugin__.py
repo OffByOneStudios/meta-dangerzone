@@ -1,8 +1,7 @@
 from madz.plugin_stub import *
 
 plugin = Plugin(
-    name="metadangerzone.metaplugins.plugin",
-
+    name="metadangerzone.metaplugins.plugin_stub",
     language="cpp",
 	
     documentation="""
