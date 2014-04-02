@@ -51,6 +51,8 @@
   <ItemGroup>
     <None Include="..\..\game_config.py" />
     <None Include="..\..\main.py" />
+    <None Include="..\..\plugins\metadangerzone\metaplugins\c_plugin(c)[0.1.0]\plugin.mdl" />
+    <None Include="..\..\plugins\metadangerzone\metaplugins\c_plugin(c)[0.1.0]\__plugin__.py" />
     <None Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\plugin.mdl" />
     <None Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\__plugin__.py" />
     <None Include="..\..\start_daemon.py" />
@@ -61,6 +63,7 @@
     <None Include="..\rebuild.bat" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\plugins\metadangerzone\metaplugins\c_plugin(c)[0.1.0]\madz.c" />
     <ClCompile Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\madz.cpp" />
   </ItemGroup>
   <ItemGroup>

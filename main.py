@@ -38,19 +38,29 @@ def create_client():
     import madz.live_script as madz
     return madz.Client(madz_config)
 
+def send_kill():
+    import madz.live_script as madz
+    madz.kill()
+
+def _usage():
+    print("Usage: main.py {daemon} | command {command_name} [-p {plugin_namespace}] [-l{log_level}]}")
+    exit(1)
+        
 if __name__ == '__main__':
     if len(sys.argv) == 1:
-        print("Usage: main.py {daemon} | command {command_name} [-p {plugin_namespace}] [-l{log_level}]}")
-        exit(1)
+        _usage()
 
     attach_madz()
 
     if sys.argv[1] == "daemon":
         start_daemon()
+    
+    elif sys.argv[1] == "kill":
+          client = create_client()
+          client.kill()
 
-    else:
+    elif sys.argv[1] == "command":
         client = create_client()
-        client.set_executable(sys.argv[1])
-        sys.argv.remove(sys.argv[1])
-
         client.run_raw(sys.argv)
+    else:
+        _usage()
