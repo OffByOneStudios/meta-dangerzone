@@ -29,7 +29,7 @@ public:
     }
     ~PluginId()
     {
-        delete[]  object.plugin_namespace;
+        delete[] object.plugin_namespace;
         delete[] object.version;
         delete[] object.implementation;
     }
