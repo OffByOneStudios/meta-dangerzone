@@ -2,7 +2,7 @@
 
 #include <cstdio>
 
-#include "mdl.hpp"
+
 #include "plugin_id.hpp"
 #include "plugin_stub.hpp"
 
@@ -30,26 +30,13 @@ void MADZOUT::_f::PluginId_destroy(MADZOUT::_t::PluginId _this)
     delete res;
 }
 
-
-MADZOUT::_t::Mdl MADZOUT::_f::Mdl_Create(char* source)
-{
-    Mdl* res = new Mdl(source);
-    return &(res->object);
-}
-
-void MADZOUT::_f::Mdl_Destroy(MADZOUT::_t::Mdl _this)
-{
-    Mdl* res = (Mdl*)_this->internal;
-    delete res;
-}
-
 MADZOUT::_t::PluginStub MADZOUT::_f::PluginStub_create(
     char* name, 
     char* version, 
     char* implementation, 
     char* directory,
     char* langauge, 
-    MADZOUT::_t::Mdl description, 
+    mt_Mdl description, 
     char* documentation)
 {
     PluginStub* res = new PluginStub(name, version, implementation, directory, langauge, description, documentation);

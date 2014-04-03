@@ -1,0 +1,16 @@
+type MdlStruct{
+    internal : *void,
+
+    code : (this *MdlStruct)-> *char
+        +doc:"Get The Mdl Code"
+}
+    +doc:"Structure holding Mdl Code";
+type Mdl *MdlStruct;
+
+
+## Mdl
+var Mdl_Create(source *char)-> Mdl
+    +doc:"Heap allocate an Mdl source. Returns null for malformed mdl";
+
+var Mdl_Destroy(this Mdl)-> void
+    +doc:"Deallocate an Mdl structure";

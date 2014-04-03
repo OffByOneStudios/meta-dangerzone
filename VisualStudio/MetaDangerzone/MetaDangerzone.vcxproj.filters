@@ -14,22 +14,22 @@
     <Filter Include="plugins\metadangerzone">
       <UniqueIdentifier>{aac53068-994f-45df-9bb3-69c63bd7b0cd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="plugins\metadangerzone\plugin%28cpp%29[0.1.0]">
+    <Filter Include="plugins\metadangerzone\metaplugins">
+      <UniqueIdentifier>{0d0c13cd-999f-49ed-8744-041aad71aebe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plugins\metadangerzone\metaplugins\plugin%28cpp%29[0.1.0]">
       <UniqueIdentifier>{8be94c91-3cb2-4f1b-9cff-89646e7cbc41}</UniqueIdentifier>
     </Filter>
-    <Filter Include="plugins\metadangerzone\c_plugin%28c%29[0.1.0]">
-      <UniqueIdentifier>{8ad56de1-01d0-4ab0-9fe5-bc4866e6e771}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="plugins\metadangerzone\py_plugin%28python%29[0.1.0]">
-      <UniqueIdentifier>{d3c39710-495d-420a-b0a1-5743b96db300}</UniqueIdentifier>
+    <Filter Include="plugins\metadangerzone\metaplugins\mdl%28cpp%29[0.1.0]">
+      <UniqueIdentifier>{297a2cc0-18c8-4627-b2b3-536d98b56144}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\__plugin__.py">
-      <Filter>plugins\metadangerzone\plugin%28cpp%29[0.1.0]</Filter>
+      <Filter>plugins\metadangerzone\metaplugins\plugin%28cpp%29[0.1.0]</Filter>
     </None>
     <None Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\plugin.mdl">
-      <Filter>plugins\metadangerzone\plugin%28cpp%29[0.1.0]</Filter>
+      <Filter>plugins\metadangerzone\metaplugins\plugin%28cpp%29[0.1.0]</Filter>
     </None>
     <None Include="..\..\game_config.py" />
     <None Include="..\..\main.py" />
@@ -47,39 +47,30 @@
       <Filter>BuildScripts</Filter>
     </None>
     <None Include="..\..\start_daemon.py" />
-    <None Include="..\..\plugins\metadangerzone\metaplugins\c_plugin(c)[0.1.0]\__plugin__.py">
-      <Filter>plugins\metadangerzone\c_plugin%28c%29[0.1.0]</Filter>
+    <None Include="..\..\plugins\metadangerzone\metaplugins\mdl(cpp)[0.1.0]\__plugin__.py">
+      <Filter>plugins\metadangerzone\metaplugins\mdl%28cpp%29[0.1.0]</Filter>
     </None>
-    <None Include="..\..\plugins\metadangerzone\metaplugins\c_plugin(c)[0.1.0]\plugin.mdl">
-      <Filter>plugins\metadangerzone\c_plugin%28c%29[0.1.0]</Filter>
-    </None>
-    <None Include="..\..\plugins\metadangerzone\metaplugins\py_plugin(python)[0.1.0]\__init__.py">
-      <Filter>plugins\metadangerzone\py_plugin%28python%29[0.1.0]</Filter>
-    </None>
-    <None Include="..\..\plugins\metadangerzone\metaplugins\py_plugin(python)[0.1.0]\__plugin__.py">
-      <Filter>plugins\metadangerzone\py_plugin%28python%29[0.1.0]</Filter>
-    </None>
-    <None Include="..\..\plugins\metadangerzone\metaplugins\py_plugin(python)[0.1.0]\plugin.mdl">
-      <Filter>plugins\metadangerzone\py_plugin%28python%29[0.1.0]</Filter>
+    <None Include="..\..\plugins\metadangerzone\metaplugins\mdl(cpp)[0.1.0]\plugin.mdl">
+      <Filter>plugins\metadangerzone\metaplugins\mdl%28cpp%29[0.1.0]</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\mdl.hpp">
-      <Filter>plugins\metadangerzone\plugin%28cpp%29[0.1.0]</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\plugin_id.hpp">
-      <Filter>plugins\metadangerzone\plugin%28cpp%29[0.1.0]</Filter>
+      <Filter>plugins\metadangerzone\metaplugins\plugin%28cpp%29[0.1.0]</Filter>
     </ClInclude>
     <ClInclude Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\plugin_stub.hpp">
-      <Filter>plugins\metadangerzone\plugin%28cpp%29[0.1.0]</Filter>
+      <Filter>plugins\metadangerzone\metaplugins\plugin%28cpp%29[0.1.0]</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\plugins\metadangerzone\metaplugins\mdl(cpp)[0.1.0]\mdl.hpp">
+      <Filter>plugins\metadangerzone\metaplugins\mdl%28cpp%29[0.1.0]</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\madz.cpp">
-      <Filter>plugins\metadangerzone\plugin%28cpp%29[0.1.0]</Filter>
+      <Filter>plugins\metadangerzone\metaplugins\plugin%28cpp%29[0.1.0]</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\plugins\metadangerzone\metaplugins\c_plugin(c)[0.1.0]\madz.c">
-      <Filter>plugins\metadangerzone\c_plugin%28c%29[0.1.0]</Filter>
+    <ClCompile Include="..\..\plugins\metadangerzone\metaplugins\mdl(cpp)[0.1.0]\madz.cpp">
+      <Filter>plugins\metadangerzone\metaplugins\mdl%28cpp%29[0.1.0]</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

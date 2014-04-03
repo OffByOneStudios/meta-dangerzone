@@ -13,17 +13,6 @@ type PluginIdStruct{
 
 type PluginId *PluginIdStruct;
 
-    
-type MdlStruct{
-    internal : *void,
-
-    code : (this *MdlStruct)-> *char
-        +doc:"Get The Mdl Code"
-}
-    +doc:"Structure holding Mdl Code";
-
-type Mdl *MdlStruct;
-
 type PluginStubStruct{
     internal : *void,
     # Fields
@@ -40,7 +29,7 @@ type PluginStubStruct{
     documentation : *char
         +doc:"Docstring of plugin",
     
-    description : Mdl
+    description : metadangerzone.metaplugins.mdl.Mdl
         +doc:"Mdl of plugin",
     #Methods
     add_depends : (this *PluginStubStruct, depend *PluginStubStruct) -> void,
@@ -67,13 +56,6 @@ var PluginId_create(
 var PluginId_destroy(this PluginId)->void
     +doc:"Deallocate a pluginId";
 
-## Mdl
-var Mdl_Create(source *char)-> Mdl
-    +doc:"Heap allocate an Mdl source. Returns null for malformed mdl";
-
-var Mdl_Destroy(this Mdl)-> void
-    +doc:"Deallocate an Mdl structure";
-
 ## PluginStub
 var PluginStub_create(
     name *char
@@ -86,7 +68,7 @@ var PluginStub_create(
         +doc:"Fully Qualified directory path to Plugin", 
     language *char
         +doc:"Implementing Language.",
-    description Mdl
+    description metadangerzone.metaplugins.mdl.Mdl
         +doc:"Mdl Code for plugin.",
     documentation *char
         +doc:"docstring",

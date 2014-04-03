@@ -10,7 +10,7 @@
 typedef madz::metadangerzone::metaplugins::plugin::_t::PluginStubStruct mt_PluginStubStruct;
 
 // Pointers
-typedef madz::metadangerzone::metaplugins::plugin::_t::Mdl mt_Mdl;
+typedef madz::metadangerzone::metaplugins::mdl::_t::Mdl mt_Mdl;
 typedef madz::metadangerzone::metaplugins::plugin::_t::PluginStub mt_PluginStub;
 
 void p_add_depends(mt_PluginStub _this, mt_PluginStub depend);

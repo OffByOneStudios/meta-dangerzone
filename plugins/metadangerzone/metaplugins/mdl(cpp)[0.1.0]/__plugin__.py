@@ -1,16 +1,14 @@
 from madz.plugin_stub import *
 
 plugin = Plugin(
-    name="metadangerzone.metaplugins.plugin_stub",
+    name="metadangerzone.metaplugins.mdl",
     language="cpp",
-	executable=True,
+	executable=False,
     documentation="""
 	Provides functionality for the creation and management of plugins.
 
     """,
-	depends=[
-          "metadangerzone.metaplugins.mdl"
-          ],
+	depends=[],
     description=MdlFileLoader("plugin.mdl"),
 )
 
