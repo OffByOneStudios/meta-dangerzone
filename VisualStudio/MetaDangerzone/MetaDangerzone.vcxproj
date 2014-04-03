@@ -55,6 +55,9 @@
     <None Include="..\..\plugins\metadangerzone\metaplugins\c_plugin(c)[0.1.0]\__plugin__.py" />
     <None Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\plugin.mdl" />
     <None Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\__plugin__.py" />
+    <None Include="..\..\plugins\metadangerzone\metaplugins\py_plugin(python)[0.1.0]\plugin.mdl" />
+    <None Include="..\..\plugins\metadangerzone\metaplugins\py_plugin(python)[0.1.0]\__init__.py" />
+    <None Include="..\..\plugins\metadangerzone\metaplugins\py_plugin(python)[0.1.0]\__plugin__.py" />
     <None Include="..\..\start_daemon.py" />
     <None Include="..\..\system_config.py" />
     <None Include="..\build.bat" />

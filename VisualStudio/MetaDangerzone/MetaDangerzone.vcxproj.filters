@@ -20,6 +20,9 @@
     <Filter Include="plugins\metadangerzone\c_plugin%28c%29[0.1.0]">
       <UniqueIdentifier>{8ad56de1-01d0-4ab0-9fe5-bc4866e6e771}</UniqueIdentifier>
     </Filter>
+    <Filter Include="plugins\metadangerzone\py_plugin%28python%29[0.1.0]">
+      <UniqueIdentifier>{d3c39710-495d-420a-b0a1-5743b96db300}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\__plugin__.py">
@@ -49,6 +52,15 @@
     </None>
     <None Include="..\..\plugins\metadangerzone\metaplugins\c_plugin(c)[0.1.0]\plugin.mdl">
       <Filter>plugins\metadangerzone\c_plugin%28c%29[0.1.0]</Filter>
+    </None>
+    <None Include="..\..\plugins\metadangerzone\metaplugins\py_plugin(python)[0.1.0]\__init__.py">
+      <Filter>plugins\metadangerzone\py_plugin%28python%29[0.1.0]</Filter>
+    </None>
+    <None Include="..\..\plugins\metadangerzone\metaplugins\py_plugin(python)[0.1.0]\__plugin__.py">
+      <Filter>plugins\metadangerzone\py_plugin%28python%29[0.1.0]</Filter>
+    </None>
+    <None Include="..\..\plugins\metadangerzone\metaplugins\py_plugin(python)[0.1.0]\plugin.mdl">
+      <Filter>plugins\metadangerzone\py_plugin%28python%29[0.1.0]</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

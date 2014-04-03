@@ -1,8 +1,8 @@
 type Sprocket{
     internal : *void,
 
-    set_foo :  (this Sprocket, foo int32) -> void,
-    get_foo : (this Sprocket) -> int32, 
+    set_foo :  (this *Sprocket, foo int32) -> void,
+    get_foo : (this *Sprocket) -> int32, 
 }
 +doc:"Object Type with Sprockets all coming out of the back of its neck there.";
 

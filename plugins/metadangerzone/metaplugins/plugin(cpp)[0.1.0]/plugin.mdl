@@ -1,3 +1,5 @@
+
+###Structures
 type PluginIdStruct{
     internal : *void, 
 
@@ -11,34 +13,16 @@ type PluginIdStruct{
 
 type PluginId *PluginIdStruct;
 
-var PluginId_create(
-    namespace *char
-        +doc:"Dot qualified namespace of plugin",
-    version *char
-        +doc:"Semver version",
-    implementation *char
-        +doc:"Implementation name of plugin."
-)->PluginId
-    +doc:"Heap allocate a PluginId";
-
-var PluginId_destroy()->PluginId
-    +doc:"Deallocate a pluginId";
     
 type MdlStruct{
     internal : *void,
 
-    code : (this MdlStruct)-> *char
+    code : (this *MdlStruct)-> *char
         +doc:"Get The Mdl Code"
 }
     +doc:"Structure holding Mdl Code";
 
 type Mdl *MdlStruct;
-
-var Mdl_Create(source *char)-> Mdl
-    +doc:"Heap allocate an Mdl source. Returns null for malformed mdl";
-
-var Mdl_Destroy(this Mdl)-> void
-    +doc:"Deallocate an Mdl structure";
 
 type PluginStubStruct{
     internal : *void,
@@ -67,9 +51,35 @@ type PluginStubStruct{
 
 type PluginStub *PluginStubStruct;
 
+### Functions
+
+## PluginId
+var PluginId_create(
+    name_space *char
+        +doc:"Dot qualified namespace of plugin",
+    version *char
+        +doc:"Semver version",
+    implementation *char
+        +doc:"Implementation name of plugin."
+)->PluginId
+    +doc:"Heap allocate a PluginId";
+
+var PluginId_destroy(this PluginId)->void
+    +doc:"Deallocate a pluginId";
+
+## Mdl
+var Mdl_Create(source *char)-> Mdl
+    +doc:"Heap allocate an Mdl source. Returns null for malformed mdl";
+
+var Mdl_Destroy(this Mdl)-> void
+    +doc:"Deallocate an Mdl structure";
+
+## PluginStub
 var PluginStub_create(
     name *char
         +doc:"Dot Qualified namespace of plugin",
+    version *char,
+        +doc:"Version number",
     implementation *char
         +doc:"Implementation name of plugin",
     directory *char
@@ -77,7 +87,9 @@ var PluginStub_create(
     language *char
         +doc:"Implementing Language.",
     description Mdl
-        +doc:"Mdl Code for plugin."
+        +doc:"Mdl Code for plugin.",
+    documentation *char
+        +doc:"docstring",
 ) -> PluginStub
     +doc:"Heap Allocate a new Plugin Stub";
     

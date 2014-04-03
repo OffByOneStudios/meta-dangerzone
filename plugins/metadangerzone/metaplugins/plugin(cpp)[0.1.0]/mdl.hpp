@@ -7,10 +7,10 @@ typedef MADZOUT::_t::Mdl mt_Mdl;
 char* p_code(mt_Mdl _this);
 
 class Mdl{
-    mt_mdlStruct object;
     char * _code;
     bool _valid;
 public:
+    mt_mdlStruct object;
 
     Mdl(char* code)
     {

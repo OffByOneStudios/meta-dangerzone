@@ -2,6 +2,10 @@
 
 #include <vector>
 
+#include <cstdlib>
+#include <cstring>
+
+
 // Structures
 typedef madz::metadangerzone::metaplugins::plugin::_t::PluginStubStruct mt_PluginStubStruct;
 
@@ -14,23 +18,40 @@ void p_remove_depends(mt_PluginStub _this, mt_PluginStub depend);
 void p_add_imports(mt_PluginStub _this, mt_PluginStub import);
 void p_remove_imports(mt_PluginStub _this, mt_PluginStub import);
 
+/// <summary>Create a copy of string.</summary>
+///
+/// <remarks>Clark, 4/3/2014.</remarks>
+///
+/// <param name="val">cstrning to copy.</param>
+///
+/// <returns>copy of val.</returns>
+
+char* own_string(char* val)
+{
+    int len = strlen(val);
+    char* res = new char[len];
+    strncpy(res, val, len);
+
+    return res;
+}
+
 class PluginStub{
-    mt_PluginStubStruct object;
+private:
     std::vector<mt_PluginStub> depends;
     std::vector<mt_PluginStub> imports;
 public:
-
+    mt_PluginStubStruct object;
     PluginStub(char *name, char* version, char* implementation, char* directory,
         char* language, mt_Mdl description, char* documentation)
     {
         //Bind properties
         object.id = MADZOUT::PluginId_create(name, version, implementation);
-        object.directory = directory;
-        object.language = language;
+        object.directory = own_string(directory);
+        object.language = own_string(language);
         object.description = description;
-        object.documentation = documentation;
-        object.imports = imports.data;
-        object.depends = depends.data;
+        object.documentation = own_string(documentation);
+        object.imports = imports.data();
+        object.depends = depends.data();
 
         depends.push_back(0);
         imports.push_back(0);
