@@ -47,7 +47,7 @@ def _usage():
     exit(1)
         
 if __name__ == '__main__':
-    if len(sys.argv) == 1:
+    iif len(sys.argv) == 1:
         _usage()
 
     attach_madz()
@@ -56,11 +56,8 @@ if __name__ == '__main__':
         start_daemon()
     
     elif sys.argv[1] == "kill":
-          client = create_client()
-          client.kill()
-
-    elif sys.argv[1] == "command":
+        client = create_client()
+        client.kill()
+    else:
         client = create_client()
         client.run_raw(sys.argv)
-    else:
-        _usage()
