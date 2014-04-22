@@ -6,10 +6,8 @@ madz_config = {
     "user_config_env": "CRAFT_ENGINE_USER_CONFIG",
     "log_to_stdout": True,
     "logging_file": "./engine.log",
-    "plugin_directories" : ["./plugins/"],
+    "plugin_directories" : ["./plugins/", "./executables/"],
     "plugin_configs" : ["system_config.py"],
-    "executable_directories" : ["executables/unit_test"],
-    "executable_configs" : ["executables/unit_test/unit_test_config.py"]
 }
 
 attached = False
@@ -47,7 +45,7 @@ def _usage():
     exit(1)
         
 if __name__ == '__main__':
-    iif len(sys.argv) == 1:
+    if len(sys.argv) == 1:
         _usage()
 
     attach_madz()
