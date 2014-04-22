@@ -35,6 +35,24 @@
     <Filter Include="plugins\metadangerzone\template\cpp\opaque_object[0.1.0]">
       <UniqueIdentifier>{9759f27c-f05d-44d6-ac29-1422473114ed}</UniqueIdentifier>
     </Filter>
+    <Filter Include="plugins\metadangerzone\template\cpp\structural_object[0.1.0]">
+      <UniqueIdentifier>{49dd5fcb-f2b3-44c3-adc6-02710d3f1084}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plugins\metadangerzone\template\cpp\singleton[0.1.0]">
+      <UniqueIdentifier>{e561eab0-d67a-48e7-9a93-550554d3b478}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plugins\metadangerzone\template\python">
+      <UniqueIdentifier>{2238f9be-a47b-4989-9617-6303d6d6883f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plugins\metadangerzone\template\python\empty[0.1.0]">
+      <UniqueIdentifier>{2ae8628d-5c8f-46d3-b18b-5e732e27ec25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plugins\metadangerzone\template\python\opaque_object[0.1.0]">
+      <UniqueIdentifier>{23973a1d-9494-4e14-b83b-66bc0a075740}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plugins\metadangerzone\template\cpp\data_type[0.1.0]">
+      <UniqueIdentifier>{8335f62e-ae55-440c-9d06-e833a12e005a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\__plugin__.py">
@@ -77,6 +95,42 @@
     <None Include="..\..\plugins\metadangerzone\template\cpp\opaque_object[0.1.0]\plugin.mdl">
       <Filter>plugins\metadangerzone\template\cpp\opaque_object[0.1.0]</Filter>
     </None>
+    <None Include="..\..\plugins\metadangerzone\template\cpp\structural_object[0.1.0]\__plugin__.py">
+      <Filter>plugins\metadangerzone\template\cpp\structural_object[0.1.0]</Filter>
+    </None>
+    <None Include="..\..\plugins\metadangerzone\template\cpp\structural_object[0.1.0]\plugin.mdl">
+      <Filter>plugins\metadangerzone\template\cpp\structural_object[0.1.0]</Filter>
+    </None>
+    <None Include="..\..\plugins\metadangerzone\template\cpp\singleton[0.1.0]\__plugin__.py">
+      <Filter>plugins\metadangerzone\template\cpp\singleton[0.1.0]</Filter>
+    </None>
+    <None Include="..\..\plugins\metadangerzone\template\cpp\singleton[0.1.0]\plugin.mdl">
+      <Filter>plugins\metadangerzone\template\cpp\singleton[0.1.0]</Filter>
+    </None>
+    <None Include="..\..\plugins\metadangerzone\template\python\empty[0.1.0]\__init__.py">
+      <Filter>plugins\metadangerzone\template\python\empty[0.1.0]</Filter>
+    </None>
+    <None Include="..\..\plugins\metadangerzone\template\python\empty[0.1.0]\__plugin__.py">
+      <Filter>plugins\metadangerzone\template\python\empty[0.1.0]</Filter>
+    </None>
+    <None Include="..\..\plugins\metadangerzone\template\python\empty[0.1.0]\plugin.mdl">
+      <Filter>plugins\metadangerzone\template\python\empty[0.1.0]</Filter>
+    </None>
+    <None Include="..\..\plugins\metadangerzone\template\python\opaque_object[0.1.0]\__init__.py">
+      <Filter>plugins\metadangerzone\template\python\opaque_object[0.1.0]</Filter>
+    </None>
+    <None Include="..\..\plugins\metadangerzone\template\python\opaque_object[0.1.0]\__plugin__.py">
+      <Filter>plugins\metadangerzone\template\python\opaque_object[0.1.0]</Filter>
+    </None>
+    <None Include="..\..\plugins\metadangerzone\template\python\opaque_object[0.1.0]\plugin.mdl">
+      <Filter>plugins\metadangerzone\template\python\opaque_object[0.1.0]</Filter>
+    </None>
+    <None Include="..\..\plugins\metadangerzone\template\cpp\data_type[0.1.0]\__plugin__.py">
+      <Filter>plugins\metadangerzone\template\cpp\data_type[0.1.0]</Filter>
+    </None>
+    <None Include="..\..\plugins\metadangerzone\template\cpp\data_type[0.1.0]\plugin.mdl">
+      <Filter>plugins\metadangerzone\template\cpp\data_type[0.1.0]</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\plugin_id.hpp">
@@ -94,6 +148,18 @@
     <ClInclude Include="..\..\plugins\metadangerzone\template\cpp\opaque_object[0.1.0]\opaque_object.hpp">
       <Filter>plugins\metadangerzone\template\cpp\opaque_object[0.1.0]</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\plugins\metadangerzone\template\cpp\structural_object[0.1.0]\structural_object.h">
+      <Filter>plugins\metadangerzone\template\cpp\structural_object[0.1.0]</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\plugins\metadangerzone\template\cpp\structural_object[0.1.0]\structural_object.hpp">
+      <Filter>plugins\metadangerzone\template\cpp\structural_object[0.1.0]</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\plugins\metadangerzone\template\cpp\singleton[0.1.0]\singleton.h">
+      <Filter>plugins\metadangerzone\template\cpp\singleton[0.1.0]</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\plugins\metadangerzone\template\cpp\singleton[0.1.0]\singleton.hpp">
+      <Filter>plugins\metadangerzone\template\cpp\singleton[0.1.0]</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\madz.cpp">
@@ -107,6 +173,15 @@
     </ClCompile>
     <ClCompile Include="..\..\plugins\metadangerzone\template\cpp\opaque_object[0.1.0]\madz.cpp">
       <Filter>plugins\metadangerzone\template\cpp\opaque_object[0.1.0]</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\plugins\metadangerzone\template\cpp\structural_object[0.1.0]\madz.cpp">
+      <Filter>plugins\metadangerzone\template\cpp\structural_object[0.1.0]</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\plugins\metadangerzone\template\cpp\singleton[0.1.0]\madz.cpp">
+      <Filter>plugins\metadangerzone\template\cpp\singleton[0.1.0]</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\plugins\metadangerzone\template\cpp\data_type[0.1.0]\madz.cpp">
+      <Filter>plugins\metadangerzone\template\cpp\data_type[0.1.0]</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

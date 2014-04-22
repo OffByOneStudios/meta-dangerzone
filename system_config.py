@@ -2,7 +2,7 @@
 from madz.system_config import *
 import os
 
-folder = os.path.dirname(__file__)
+folder = os.path.abspath(os.path.dirname(__file__))
 
 config = SystemConfig([
   #  LanguageConfig("c", [

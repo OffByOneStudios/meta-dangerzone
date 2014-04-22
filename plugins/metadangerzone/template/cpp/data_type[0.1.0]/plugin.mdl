@@ -1,0 +1,14 @@
+type DataType{
+    value : uint32
+        +doc:"An integral value"
+}
++doc:"A ByValue Datatype";
+
+var DataType_init(value uint32)->DataType
+    +doc:"Stack allocate a Datatype.";
+
+var DataType_to_string(data DataType)-> *char
+    +doc:"Return string name of data.";
+
+var DataType_equals(data DataType, other DataType) -> uint32
+    +doc:"Returns 1 if data equals other, 0 otherwise.";
