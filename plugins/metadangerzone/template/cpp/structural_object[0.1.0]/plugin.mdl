@@ -1,0 +1,33 @@
+
+type StructuralObjectStruct{
+    internal : *void
+        +doc:"Internal C++ Object.",
+
+    destroy : (
+        this *StructuralObjectStruct
+            +doc:"This Structure."    
+    )-> void
+        +doc:"Deallocate this object,"
+
+    equals : (
+        this *StructuralObjectStruct
+            +doc:"This Object.", 
+        other *StructuralObjectStruct
+            +doc:"Other Object."
+    )-> uint32
+        +doc:"Returns 1 if Objects are equal, False Otherwise.",
+
+    to_string : (
+        this *StructuralObjectStruct
+            +doc:"This Object.", 
+    )-> *char
+        +doc:"String representation of StructuralObject.",
+
+
+};
+
+type StructuralObject *StructuralObjectStruct;
+
+var StructuralObject_create() -> StructuralObject
+    +doc:"Heap Allocate a StructuralObject.";
+

@@ -1,0 +1,7 @@
+
+type OpaqueObject *void;
+
+var OpaqueObject_create() -> OpaqueObject;
+var OpaqueObject_destory(this OpaqueObject) -> void;
+var OpaqueObject_equals(this OpaqueObject, other OpaqueObject) -> uint32;
+var OpaqueObject_to_string(this OpaqueObject) -> *char;

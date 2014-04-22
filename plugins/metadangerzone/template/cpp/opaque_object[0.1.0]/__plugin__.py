@@ -1,12 +1,12 @@
 from madz.plugin_stub import *
 
 plugin = Plugin(
-    name="metadangerzone.template.cpp.empty",
+    name="metadangerzone.template.cpp.opaque_object",
     language="cpp",
 	executable=False,
     documentation="""
-	Empty C++ Plugin Template
-
+	Opaque Object C++ Plugin Template.
+    This plugin provides an object talked about only by reference. Methods on opaque objects are enumerated procedurally
     """,
 	depends=[
           "metadangerzone.metaplugins.mdl"
