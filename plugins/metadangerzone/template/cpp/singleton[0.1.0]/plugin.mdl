@@ -1,0 +1,6 @@
+
+type Singleton *void;
+
+var Singleton_create() -> Singleton;
+var Singleton_destory(this Singleton) -> void;
+var Singleton_to_string(this Singleton) -> *char;

@@ -55,6 +55,10 @@
     <None Include="..\..\plugins\metadangerzone\metaplugins\mdl(cpp)[0.1.0]\__plugin__.py" />
     <None Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\plugin.mdl" />
     <None Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\__plugin__.py" />
+    <None Include="..\..\plugins\metadangerzone\template\cpp\empty[0.1.0]\plugin.mdl" />
+    <None Include="..\..\plugins\metadangerzone\template\cpp\empty[0.1.0]\__plugin__.py" />
+    <None Include="..\..\plugins\metadangerzone\template\cpp\opaque_object[0.1.0]\plugin.mdl" />
+    <None Include="..\..\plugins\metadangerzone\template\cpp\opaque_object[0.1.0]\__plugin__.py" />
     <None Include="..\..\start_daemon.py" />
     <None Include="..\..\system_config.py" />
     <None Include="..\build.bat" />
@@ -65,11 +69,15 @@
   <ItemGroup>
     <ClCompile Include="..\..\plugins\metadangerzone\metaplugins\mdl(cpp)[0.1.0]\madz.cpp" />
     <ClCompile Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\madz.cpp" />
+    <ClCompile Include="..\..\plugins\metadangerzone\template\cpp\empty[0.1.0]\madz.cpp" />
+    <ClCompile Include="..\..\plugins\metadangerzone\template\cpp\opaque_object[0.1.0]\madz.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\plugins\metadangerzone\metaplugins\mdl(cpp)[0.1.0]\mdl.hpp" />
     <ClInclude Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\plugin_id.hpp" />
     <ClInclude Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\plugin_stub.hpp" />
+    <ClInclude Include="..\..\plugins\metadangerzone\template\cpp\opaque_object[0.1.0]\opaque_object.h" />
+    <ClInclude Include="..\..\plugins\metadangerzone\template\cpp\opaque_object[0.1.0]\opaque_object.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
