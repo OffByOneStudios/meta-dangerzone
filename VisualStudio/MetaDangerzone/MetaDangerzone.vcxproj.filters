@@ -160,6 +160,12 @@
     <ClInclude Include="..\..\plugins\metadangerzone\template\cpp\singleton[0.1.0]\singleton.hpp">
       <Filter>plugins\metadangerzone\template\cpp\singleton[0.1.0]</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\plugins\metadangerzone\template\cpp\data_type[0.1.0]\data_type.h">
+      <Filter>plugins\metadangerzone\template\cpp\data_type[0.1.0]</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\plugins\metadangerzone\template\cpp\data_type[0.1.0]\data_type.hpp">
+      <Filter>plugins\metadangerzone\template\cpp\data_type[0.1.0]</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\plugins\metadangerzone\metaplugins\plugin(cpp)[0.1.0]\madz.cpp">

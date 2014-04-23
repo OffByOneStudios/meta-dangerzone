@@ -5,12 +5,10 @@ plugin = Plugin(
     language="cpp",
 	executable=False,
     documentation="""
-	Empty C++ Plugin Template
+	C++ Plugin Template for a DataType, a pass by value structure without attached methods.
 
     """,
-	depends=[
-          "metadangerzone.metaplugins.mdl"
-          ],
+	depends=[],
     description=MdlFileLoader("plugin.mdl"),
 )
 

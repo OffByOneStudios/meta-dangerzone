@@ -6,10 +6,8 @@ plugin = Plugin(
 
     language="python",
 
-    depends=[
-    ],
-    imports=[
-    ],
+    depends=[],
+    imports=[],
     
     description=MdlFileLoader("plugin.mdl"),
 )

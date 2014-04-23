@@ -8,9 +8,7 @@ plugin = Plugin(
 	Structural Object C++ Plugin Template.
     This plugin provides an object talked about by reference or by value. Methods on structural objects are enumerated on the structure.
     """,
-	depends=[
-          "metadangerzone.metaplugins.mdl"
-          ],
+	depends=[],
     description=MdlFileLoader("plugin.mdl"),
 )
 

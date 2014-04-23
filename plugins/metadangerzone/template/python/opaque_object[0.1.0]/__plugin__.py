@@ -6,11 +6,9 @@ plugin = Plugin(
 	executable=False,
     documentation="""
 	Opaque Object Python Plugin Template.
-    This plugin provides an object talked about only by reference. Methods on opaque objects are enumerated procedurally
+    This plugin provides an object talked about only by reference. Methods on opaque objects are enumerated procedurally.
     """,
-	depends=[
-          "metadangerzone.metaplugins.mdl"
-          ],
+	depends=[],
     description=MdlFileLoader("plugin.mdl"),
 )
 

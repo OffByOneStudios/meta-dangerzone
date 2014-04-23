@@ -8,9 +8,7 @@ plugin = Plugin(
 	Empty C++ Plugin Template
 
     """,
-	depends=[
-          "metadangerzone.metaplugins.mdl"
-          ],
+	depends=[],
     description=MdlFileLoader("plugin.mdl"),
 )
 

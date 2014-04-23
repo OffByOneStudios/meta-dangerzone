@@ -8,9 +8,7 @@ plugin = Plugin(
 	Opaque Singleton Object C++ Plugin Template.
     This plugin provides an object of which at most one exists.
     """,
-	depends=[
-          "metadangerzone.metaplugins.mdl"
-          ],
+	depends=[],
     description=MdlFileLoader("plugin.mdl"),
 )
 
